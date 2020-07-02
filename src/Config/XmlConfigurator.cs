@@ -731,9 +731,9 @@ namespace log4net.Config
                                         // .NET 4.0 warning CS0618: 'System.Xml.XmlReaderSettings.ProhibitDtd'
                                         // is obsolete: 'Use XmlReaderSettings.DtdProcessing property instead.'
 #if !NET_4_0
-					settings.ProhibitDtd = false;
+					settings.ProhibitDtd = true;
 #else
-					settings.DtdProcessing = DtdProcessing.Parse;
+					settings.DtdProcessing = DtdProcessing.Ignore;
 #endif
 
 					// Create a reader over the input stream
